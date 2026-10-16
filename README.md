@@ -29,8 +29,8 @@ flowchart TD
     Bot <--> Gateway["🌐 9Router Gateway (Port 20128)"]
     Gateway <--> Privoxy["🛡️ Privoxy HTTP Bridge (127.0.0.1:40001)"]
     Privoxy <--> WARP["⚡ Cloudflare WARP (127.0.0.1:40000)"]
-    WARP <--> Gemini["✨ Google Gemini 3.8 Flash (5-Key Round-Robin / 1M Context)"]
-    WARP <--> Groq["🚀 Groq AI (3-Key Round-Robin / Llama 70B & Whisper STT)"]
+    WARP <--> Gemini["✨ Google Gemini API"]
+    WARP <--> Groq["🚀 Groq AI API"]
 ```
 
 ---
@@ -38,8 +38,8 @@ flowchart TD
 ## ✨ Key Features
 
 - **🔄 Multi-Key Round-Robin Balancing:**
-  - **Google Gemini 3.8 Flash:** 5 API keys load-balanced with 1,000,000+ token context window.
-  - **Groq AI:** 3 API keys load-balanced for ultra-fast completions (`qwen/qwen3.8-27b`, `openai/gpt-oss-120b`).
+  - **Google Gemini:** Automated load-balancing and failover with 1,000,000+ token context window.
+  - **Groq AI:** Ultra-fast completions (`qwen/qwen3.8-27b`, `openai/gpt-oss-120b`) and Whisper STT with automatic key rotation.
 - **🛡️ 100% Geo-Unblocking & Cloudflare Bypass:**
   - Integrated Cloudflare WARP proxy (`mode proxy` on `40000`) and Privoxy bridge (`40001`) eliminates `400: User location is not supported` on Gemini and Cloudflare `1010` blocks on Groq.
 - **🎙️ Neural Voice Intelligence:**

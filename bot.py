@@ -2,7 +2,7 @@
 """
 Sisi Telegram Chatbot connected to 9Router AI Gateway
 Features:
-- Google Gemini 3.8 Flash (5-key round-robin with 1M context)
+- Google Gemini 3.8 Flash (Round-robin with 1M context)
 - Groq AI (GPT-OSS 120B / Qwen 3.8 27B / Whisper Turbo STT)
 - High-quality neural Text-to-Speech (Edge-TTS English & Persian)
 - Real-time live Web Search via DuckDuckGo
@@ -263,8 +263,8 @@ async def model_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         f"🎯 <b>Current Model:</b> <code>{current}</code>\n\n"
         "<b>Available Options:</b>\n"
         "• <code>sisi</code> - Smart Combo (Gemini 3.8 Flash + Groq fallback)\n"
-        "• <code>gemini/gemini-3.8-flash</code> - Google Gemini 3.8 Flash (5-key round-robin)\n"
-        "• <code>groq/openai/gpt-oss-120b</code> - Groq GPT-OSS 120B (3-key round-robin)\n"
+        "• <code>gemini/gemini-3.8-flash</code> - Google Gemini 3.8 Flash (Round-robin)\n"
+        "• <code>groq/openai/gpt-oss-120b</code> - Groq GPT-OSS 120B (Round-robin)\n"
         "• <code>groq/qwen/qwen3.8-27b</code> - Groq Qwen 3.8 27B\n\n"
         "To switch: <code>/model &lt;name&gt;</code>"
     )
