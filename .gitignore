@@ -1,0 +1,33 @@
+# Environment files & Secrets
+.env
+.env.local
+.env.*.local
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+*.log
+
+# 9Router runtime & databases
+db/
+*.sqlite
+*.sqlite3
+runtime/
+.9router/
+
+# Audio / Temp files
+*.mp3
+*.ogg
+*.opus
+/tmp/
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

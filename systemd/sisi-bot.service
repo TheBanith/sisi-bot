@@ -1,0 +1,18 @@
+[Unit]
+Description=Sisi Telegram Chatbot connected to 9Router
+After=network.target 9router.service privoxy.service
+Requires=9router.service
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/sisi-bot
+Environment=DEFAULT_MODEL=sisi
+Environment=PYTHONUNBUFFERED=1
+EnvironmentFile=-/root/sisi-bot/.env
+ExecStart=/root/sisi-bot/venv/bin/python /root/sisi-bot/bot.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
